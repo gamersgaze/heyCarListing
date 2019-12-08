@@ -49,7 +49,7 @@ public class ListingServiceImpl extends BaseService implements ListingService {
 
     @Override
     public List<ListingEntity> fetchListings(FetchListingRequest request) {
-        return  listingRepository.searchListingByDealerId(request);
+        return listingRepository.searchListingByDealerId(request);
     }
 
 

@@ -21,9 +21,4 @@ public class BasicConfigurations {
         return modelMapper;
     }
 
-    @Bean
-    public MethodValidationPostProcessor methodValidationPostProcessor() {
-        return new MethodValidationPostProcessor();
-    }
-
 }

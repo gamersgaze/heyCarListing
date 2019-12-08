@@ -20,20 +20,12 @@ public abstract class BaseUtils {
         return i18nMessages.get(key, DEFAULT_LOCALE_FALLBACK, args);
     }
 
+    /*
+     * this will map the properties of one class to another, it internally use Java Reflection API
+     * I have used generics , because it should work with all types of classes
+     */
     protected <E extends BaseEntity, D extends BaseDTO> E mapToEntity(D dto, Class<E> entityClass) {
         return modelMapper.map(dto, entityClass);
     }
 
-
-//    protected <D extends BaseDTO, E extends BaseEntity> D mapToDTO(E entity, Class<D> dtoClass) {
-//        return modelMapper.map(entity, dtoClass);
-//    }
-
-
-//    protected <S extends BaseDTO, E extends BaseEntity> List<E> mapAll(Collection<S> dtos, Class<E> entityClass) {
-//        if (nonNull(dtos)) {
-//            return dtos.stream().filter(Objects::nonNull).map(e -> modelMapper.map(e, entityClass)).collect(Collectors.toList());
-//        }
-//        return Collections.emptyList();
-//    }
 }
