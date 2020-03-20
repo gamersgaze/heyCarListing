@@ -2,8 +2,7 @@ import groovy.json.JsonSlurper
 
 node('master') {
     def workSpaceHome = pwd()
-    def configFile = new File(workSpaceHome+'/config.json')
-    def configData = new JsonSlurper().parse(configFile)
+   
 
     stage('Clean') {
         deleteDir()
@@ -14,7 +13,8 @@ node('master') {
 
     stage('Run') {
        withMaven(jdk: 'JDK', maven: 'maven3', mavenLocalRepo: '', mavenOpts: '', mavenSettingsFilePath: '/opt/qtmserverdependency/settings.xml') {
-
+            def configFile = new File(workSpaceHome+'/config.json')
+            def configData = new JsonSlurper().parse(configFile)
             sh "atlas-package"
 
         }
