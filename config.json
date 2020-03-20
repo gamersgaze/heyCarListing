@@ -1,0 +1,5 @@
+{
+  "jira": "8",
+  "env": "qa",
+  "database": "mysql"
+}
