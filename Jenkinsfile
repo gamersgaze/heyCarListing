@@ -15,7 +15,7 @@ node('master') {
     println(foobar)
     }
     stage('Deploy') {
-       
+         println("done----------------")
 
     }
 }
