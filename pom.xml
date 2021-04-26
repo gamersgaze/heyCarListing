@@ -18,7 +18,7 @@
 		<java.version>1.8</java.version>
 		<modelmapper.version>2.3.2</modelmapper.version>
 		<apache.common.collections.version>4.2</apache.common.collections.version>
-		<apache.common.io.version>2.6</apache.common.io.version>
+		<apache.common.io.version>2.7</apache.common.io.version>
 	</properties>
 
 	<dependencies>
